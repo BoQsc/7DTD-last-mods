@@ -1,0 +1,12 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffLevelUpTracking']/effect_group">
+	
+	
+		<triggered_effect trigger="onSelfBuffRemove" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="0">
+			<requirement name="PlayerLevel" operation="Equals" value="1"/>
+		</triggered_effect>
+	
+		<triggered_effect trigger="onSelfBuffStart" action="AddProgressionLevel" progression_name="craftingPlayerLevel" level="1">
+		</triggered_effect>
+	</append>
+</configs>

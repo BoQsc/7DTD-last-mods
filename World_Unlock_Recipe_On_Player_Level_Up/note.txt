@@ -1,0 +1,87 @@
+<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFiremansAlmanacSpeed" level="-1"/>
+<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="-1"/>
+<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="@$LastPlayerLevel"/>
+
+buffLevelUpTracking
+
+Make new crafting skill "Player Level" in progression.xml
+Increase crafting skill on player level up
+
+
+"You unlock this Recipe by leveling your character."
+
+<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSeeds" level="1"/>
+<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="craftingPlayerLevel" level="1"/>
+
+<triggered_effect trigger="onSelfBuffUpdate" action="AddProgressionLevel" progression_name="craftingPlayerLevel" level="1"/>
+	<requirement name="PlayerLevel" operation="GT" value="@$LastPlayerLevel"/>
+</triggered_effect>
+
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="X" operation="set" value="2"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="@X"/>
+		
+Use requirement to set above 15 player level if player is above 15 level and progression is greater than 15.
+
+Requirement: If the progression is less than player level.
+
+Requirement if progression is higher than player level.
+
+requirement if player is higher level than 1
+
+ensure that disabling modlet will not affect players.
+
+"Levels until block unlock"
+
+This block unlocked in the next levels
+
+Unlock building blocks for new players at level 15
+
+Server restricted by level
+
+
+
+
+        <!--Element appended by: "World_Recipe_On_Player_Level_Up"-->
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="1">
+        <!--Element appended by: "World_Recipe_On_Player_Level_Up"-->
+        <requirement name="PlayerLevel" operation="Equals" value="1" />
+      </triggered_effect>
+
+
+
+
+
+<requirement name="PlayerLevel" operation="Equals" value="1"/>
+
+onSelfBuffStart - happens immediately
+
+onSelfBuffRemove - takes 20 seconds due to buffLevelUpTracking duration being 20
+
+
+		<!-- Here is the reason it takes 20 seconds to update after level up.
+		  <buff name="buffLevelUpTracking" hidden="true" remove_on_death="false">
+			<stack_type value="ignore" />
+			<duration value="20" />
+			<update_rate value=".1" />
+		
+		-->
+
+
+
+
+
+
+
+        <!--Element appended by: "World_Recipe_On_Player_Level_Up"-->
+      </triggered_effect>
+      <triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="1">
+        <!--Element appended by: "World_Recipe_On_Player_Level_Up"-->
+        <requirement name="PlayerLevel" operation="Equals" value="1" />
+      </triggered_effect>
+
+
+
+Why would craftingPlayerLevel would not increase consistently?
+		

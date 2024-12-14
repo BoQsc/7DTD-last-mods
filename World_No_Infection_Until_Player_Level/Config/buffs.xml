@@ -1,0 +1,18 @@
+<configs>
+	<insertBefore xpath="/buffs/buff[@name='buffOnAnyCrit']/effect_group/triggered_effect[@buff='buffInfectionCatch']">
+		<requirement name="PlayerLevel" operation="GT" value="5"/>
+	</insertBefore>
+</configs>
+
+
+
+<!--
+		<effect_group>
+			
+			<requirement name="CVarCompare" cvar="noTeethNoInfection" operation="LT" value="1"/>
+			<requirement name="!HasBuff" buff="buffPreacherFullSetBonusCheck"/>
+			<requirement name="PlayerLevel" operation="GT" value="5"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="-.1" tags="buffInfectionCatch"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInfectionCatch"/>
+		</effect_group>
+ -->

@@ -1,0 +1,43 @@
+<configs>
+	<append xpath="/progression/crafting_skills">
+
+		<crafting_skill name="craftingPlayerLevel" max_level="500" parent="attCrafting" name_key="craftingPlayerLevel" desc_key="craftingPlayerLevelDesc" long_desc_key="craftingPlayerLevelLongDesc" icon="ui_game_symbol_quest">
+
+			<display_entry icon="cntDewCollector,forge" name_key="workstationsT1-1,workstationsT1-2" has_quality="false" unlock_level="2,5" >
+				<unlock_entry item="cntDewCollector" unlock_tier="1" />
+				<unlock_entry item="forge" unlock_tier="2" />
+			</display_entry>
+			<display_entry icon="workbench,resourceLockPick,toolBellows,toolAnvil" name_key="workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-4" has_quality="false" unlock_level="10,15,20,25" >
+				<unlock_entry item="workbench" unlock_tier="1" />
+				<unlock_entry item="resourceLockPick" unlock_tier="2" />
+				<unlock_entry item="toolBellows" unlock_tier="3" />
+				<unlock_entry item="toolAnvil" unlock_tier="4" />
+			</display_entry>
+			<display_entry icon="cementMixer" name_key="workstationsT3-1" has_quality="false" unlock_level="30" >
+				<unlock_entry item="cementMixer" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="chemistryStation" name_key="workstationsT4" has_quality="false" unlock_level="50" >
+				<unlock_entry item="chemistryStation" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="toolForgeCrucible" name_key="workstationsT5" has_quality="false" unlock_level="75" >
+				<unlock_entry item="toolForgeCrucible" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="cntDewCollector"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="forge"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="workbench"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,100" value="1" tags="resourceLockPick"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="toolBellows"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="toolAnvil"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="cementMixer"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="chemistryStation"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="toolForgeCrucible"/>
+			</effect_group>
+		</crafting_skill>
+
+	</append>
+
+</configs>
+
+

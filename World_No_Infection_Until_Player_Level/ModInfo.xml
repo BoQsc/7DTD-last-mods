@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <Name value="World_No_Infection_Until_Player_Level" />
+  <DisplayName value="World_No_Infection_Until_Player_Level" />
+  <Description value="Prevent players from catching infection at level range." />
+  <Author value="Vanilla Server" />
+  <Version value="1.0.0" compat="1.0S,1.1S" />
+  <Website value="None" />
+</xml>
+

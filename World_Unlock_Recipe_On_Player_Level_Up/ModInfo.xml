@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <Name value="World_Recipe_On_Player_Level_Up" />
+  <DisplayName value="World_Recipe_On_Player_Level_Up" />
+  <Description value="Allows to unlock recipes by player level up." />
+  <Author value="Vanilla Server" />
+  <Version value="1.0.0" compat="1.0S,1.1S, 1.2S" />
+  <Website value="vanillaserver.eu" />
+</xml>
+

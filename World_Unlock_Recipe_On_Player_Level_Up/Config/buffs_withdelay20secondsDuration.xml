@@ -1,0 +1,23 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffLevelUpTracking']/effect_group">
+	
+	
+		<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="craftingPlayerLevel" level="1">
+			<requirement name="PlayerLevel" operation="LTE" value="1"/>
+		</triggered_effect>
+	
+		<triggered_effect trigger="onSelfBuffRemove" action="AddProgressionLevel" progression_name="craftingPlayerLevel" level="1">
+			<requirement name="PlayerLevel" operation="GT" value="0"/>
+		</triggered_effect>
+		<!-- Here is the reason it takes 20 seconds to update after level up.
+		  <buff name="buffLevelUpTracking" hidden="true" remove_on_death="false">
+			<stack_type value="ignore" />
+			<duration value="20" />
+			<update_rate value=".1" />
+		
+		-->
+		
+		
+		
+	</append>
+</configs>

@@ -1,0 +1,9 @@
+<configs>
+	<set xpath="/materials/material[@id='Mwood_weak_shapes']/property[@name='MaxDamage']/@value">20</set>
+	<set xpath="/materials/material[@id='Mwood_weak']/property[@name='MaxDamage']/@value">20</set>
+
+	
+
+</configs>
+
+
